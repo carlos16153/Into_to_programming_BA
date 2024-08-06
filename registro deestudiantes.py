@@ -6,7 +6,7 @@ def guardar_en_archivo(lista, nombre_archivo):
             linea = ','.join(item) + '\n'
             archivo.write(linea)
 
-nombre=[["33642612","Carlos Adrian"],[ "15957531","Erik Scala"],[ "32549844","Melani Velasque"]]
+nombre=""#[["33642612","Carlos Adrian"],[ "15957531","Erik Scala"],[ "32549844","Melani Velasque"]]
 res=""
 while(res!="0"):
     flag=0
@@ -40,8 +40,14 @@ while(res!="0"):
             guardar_en_archivo(nombre, 'estudiantes.txt')
     elif(res=="5"):
         with open("estudiantes.txt","r")as archivo:
-            nombre=archivo.readlines()
-            patron = nombre.compile(r'[^a-zA-Z ]')
+            lineas=archivo.readlines()
+
+        result = []
+        for item in lineas:
+            cleaned_item = item.strip()
+            split_item = cleaned_item.split(', ')
+            result.append(split_item)
+        nombre=result
         print(nombre)
     elif(res=="6"):
         for estudiante in range(len(nombre)):
