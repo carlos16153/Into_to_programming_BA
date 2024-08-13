@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="styles/estudiantes.css">
 <body>
     
-    <script tipe="text/javascript" src="scripts/estudiantes.js"></script>
+    
     <header>
         <nav>
             <ul>
-                <li><a href="#"onclick="agregar_estudiantes()">Agregar estudiantes</a></li>
-                <li><a href="#"onclick="buscar_estudiantes()">Buscar estudiantes</a></li>
+                <li><a href="#"onclick="mostrar_agregar_estudiantes()">Agregar estudiantes</a></li>
+                <li><a href="#"onclick="mostrar_buscar_estudiantes()">Buscar estudiantes</a></li>
                 <li><a href="#"onclick="eliminar_estudiante()">Eliminar ultimo estudiantes</a></li>
-                <li><a href="#">Guardar un archivo </a></li>
-                <li><a href="#">Cargar desde un archivo</a></li>
-                <li><a href="#">Listado de estudiantes</a></li>
+                <li><a href="#"onclick="guardar_()">Guardar un archivo </a></li>
+                <li><a href="#"onclick="cargar_archivo()">Cargar desde un archivo</a></li>
+                <li><a href="#"onclick="guardar_listado()">Listado de estudiantes</a></li>
                 
             </ul>
         </nav>
@@ -40,7 +40,7 @@
         <label for="buscar-ci">C.I.:</label>
         <input type="text" id="buscar-ci" name="buscar-ci" required>
         <br>
-        <button type="button" onclick="buscarEstudiante()">Buscar</button>
+        <button type="button" onclick="buscar_Estudiante()">Buscar</button>
     </form></section>
         <section id="delete_student" style="display: none;"><!-- Formulario para eliminar estudiante -->
     <h2>Eliminar Estudiante</h2>
@@ -51,7 +51,8 @@
         <br>
         <button type="button" onclick="eliminar_Estudiante()">Eliminar</button>
     </form></section>
-            
+            <section id="Listado"></section>
     </main>
+<script tipe="text/javascript" src="scripts/estudiantes.js"></script>
 </body>
 </html>
